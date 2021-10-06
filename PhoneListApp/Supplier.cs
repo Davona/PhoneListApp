@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PhoneListApp
 {
-    class Supplier:PhoneNumber
+    class SupplierContact:PhoneContact
     {
-        public Supplier(string name,string number):base(name,number)
+        public SupplierContact(string name,string number):base(name,number)
         {
 
         }

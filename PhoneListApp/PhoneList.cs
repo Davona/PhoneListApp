@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneListApp
 {
-    class PhoneList<T> where T : PhoneNumber
+    class PhoneList<T> where T : PhoneContact
     {
         public List<T> numbers;
         public PhoneList()
@@ -15,24 +15,24 @@ namespace PhoneListApp
         }
         public T FindByName(string name)
         {
-            T speaker = null; ;
+            T speakercontact = null; ;
             for (int i = 0; i < numbers.Count; i++)
             {
                 if (numbers[i].Name == name)
-                    speaker = numbers[i];
+                    speakercontact = numbers[i];
             }
-            return speaker;
+            return speakercontact;
 
         }
         public T FindByNumber(string number)
         {
-            T speaker = null;
+            T speakercontact = null;
             for (int i = 0; i < numbers.Count; i++)
             {
                 if (numbers[i].Number == number)
-                    speaker = numbers[i];
+                    speakercontact = numbers[i];
             }
-            return speaker;
+            return speakercontact;
 
         }
     }
