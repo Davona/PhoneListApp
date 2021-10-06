@@ -8,18 +8,18 @@ namespace PhoneListApp
 {
     class PhoneList<T> where T : PhoneContact
     {
-        public List<T> numbers;
+        public List<T> contacts;
         public PhoneList()
         {
-            numbers = new List<T>();
+            contacts = new List<T>();
         }
         public T FindByName(string name)
         {
             T speakercontact = null; ;
-            for (int i = 0; i < numbers.Count; i++)
+            for (int i = 0; i < contacts.Count; i++)
             {
-                if (numbers[i].Name == name)
-                    speakercontact = numbers[i];
+                if (contacts[i].Name == name)
+                    speakercontact = contacts[i];
             }
             return speakercontact;
 
@@ -27,10 +27,10 @@ namespace PhoneListApp
         public T FindByNumber(string number)
         {
             T speakercontact = null;
-            for (int i = 0; i < numbers.Count; i++)
+            for (int i = 0; i < contacts.Count; i++)
             {
-                if (numbers[i].Number == number)
-                    speakercontact = numbers[i];
+                if (contacts[i].Number == number)
+                    speakercontact = contacts[i];
             }
             return speakercontact;
 
